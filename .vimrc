@@ -74,4 +74,4 @@ set listchars=tab:>.,trail:.,extends:#,nbsp:.
 set expandtab
 
 " make NERDTree work in putty
-let g:NERDTreeDirArrows=0
+"let g:NERDTreeDirArrows=0
