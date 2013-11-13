@@ -31,8 +31,11 @@ set listchars=tab:▸\ ,eol:¬
 set nolist
 
 " set hotkeys to run specs from within vim
-nmap <leader>ra :!rspec ./spec<cr>
-nmap <leader>r :!rspec %<cr>
+nmap <leader>ra :!rspec  --color ./spec<cr>
+nmap <leader>r :!rspec --color %<cr>
+
+" hotkeys to run cucumber features from within vim 
+nmap <leader>c :!cucumber --color ./features<cr>
 
 " set hotkey to toggle NERDTree
 nmap <leader>n :NERDTreeToggle<cr>
