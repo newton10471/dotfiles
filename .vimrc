@@ -30,9 +30,9 @@ nmap <leader>l :set list!<CR>
 set listchars=tab:▸\ ,eol:¬
 set nolist
 
-" set hotkeys to run specs from within vim
-nmap <leader>ra :!bundle exec rspec ./spec<cr>
-nmap <leader>r :!bundle exec rspec %<cr>
+" set hotkeys to run specs from within vim (currently commented out since rspec-vim does this)
+"nmap <leader>ra :!bundle exec rspec ./spec<cr>
+"nmap <leader>r :!bundle exec rspec %<cr>
 
 " set hotkey to toggle NERDTree
 nmap <leader>n :NERDTreeToggle<cr>
@@ -78,3 +78,10 @@ set expandtab
 
 " magic key from Drew Neil vim class
 xnoremap . :norm.<CR>
+
+"add key mappings for rspec-vim
+" RSpec.vim mappings
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>"
