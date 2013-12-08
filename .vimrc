@@ -75,3 +75,6 @@ set expandtab
 
 " make NERDTree work in putty
 "let g:NERDTreeDirArrows=0
+
+" magic key from Drew Neil vim class
+xnoremap . :norm.<CR>
