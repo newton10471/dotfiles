@@ -85,3 +85,13 @@ map <Leader>t :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>"
+
+"don't use swap files so I can open giant files guilt-free
+set noswapfile
+
+"use .tags instead of tags for ctags
+set tags+=.tags
+
+" set up command to regenerate tags from within vim with F7
+command! GenerateTagss call system('/usr/local/bin/ctags -Rf ./.tags --exclude=.git .') | echo
+nmap <F7> :GenerateTags<CR>
